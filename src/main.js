@@ -14,6 +14,10 @@ import Vue from 'vue';
  * Import and bootstrap the plugins.
  */
 
+
+import BootstrapVue from 'bootstrap-vue';
+import VueNativeSock from 'vue-native-websocket';
+
 import './plugins/vuex';
 import './plugins/axios';
 import { i18n } from './plugins/vue-i18n';
@@ -21,7 +25,6 @@ import { router } from './plugins/vue-router';
 import './plugins/vuex-router-sync';
 import './plugins/bootstrap';
 import './plugins/font-awesome';
-
 /* ============
  * Styling
  * ============
@@ -51,8 +54,15 @@ import App from './App';
 import store from './store';
 
 Vue.config.productionTip = false;
-
-store.dispatch('auth/check');
+Vue.use(BootstrapVue);
+Vue.use(VueNativeSock, 'ws://a19e5027.ngrok.io', {
+  store,
+  format: 'json',
+  reconnection: true,
+  reconnectionAttempts: 5,
+  reconnectionDelay: 3000,
+});
+store.$socket = Vue.prototype.$socket;
 
 /* eslint-disable no-new */
 new Vue({

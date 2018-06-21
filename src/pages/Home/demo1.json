@@ -1,0 +1,89 @@
+{
+  "title": "Nachtenlijke escapades",
+  "demo": [
+    {
+      "type": "slide",
+      "slide": 0
+    },
+    {
+      "type": "knx",
+      "data": {
+        "bedroom_wall": 0,
+        "livingroom_wall": 0,
+        "bedroom_cover": 0,
+        "livingroom_cover": 0,
+        "bathroom_light": 0,
+        "staircase_light": 0,
+        "livingroom_light": 0
+      }
+    },
+    {
+      "type": "wait",
+      "delay": 3000
+    },
+    {
+      "type": "slide",
+      "slide": 1
+    },
+    {
+      "type": "knx",
+      "data": {
+        "bedroom_wall": 50,
+        "livingroom_wall": 0,
+        "bedroom_cover": 0,
+        "livingroom_cover": 0,
+        "bathroom_light": 0,
+        "staircase_light": 0,
+        "livingroom_light": 0
+      }
+    },
+    {
+      "type": "wait",
+      "delay": 1000
+    },
+    {
+      "type": "knx",
+      "data": {
+        "staircase_light": 1
+      }
+    },
+    {
+      "type": "wait",
+      "delay": 3000
+    },
+    {
+      "type": "slide",
+      "slide": 2
+    },
+    {
+      "type": "knx",
+      "data": {
+        "bedroom_wall": 0,
+        "livingroom_wall": 0,
+        "bedroom_cover": 0,
+        "livingroom_cover": 0,
+        "bathroom_light": 1,
+        "staircase_light": 0,
+        "livingroom_light": 0
+      }
+    }
+  ],
+  "slides": [
+    {
+      "src": "http://3.bp.blogspot.com/__Y_fpB7LgtA/TNwYa-V5ocI/AAAAAAAABx0/RI9B8fMxqhs/s1600/1200_nacht_PS_8463%2Bkopie.jpg",
+      "title": "02:44"
+    },
+    {
+      "src": "https://want.nl/wp-content/uploads/2015/11/Slapen-bed-WANT.jpg",
+      "title": "Opstaan voor het toilet"
+    },
+    {
+      "src": "https://i.pinimg.com/originals/e1/ee/25/e1ee25af71c245f5fb446ac4b3b960d0.jpg",
+      "title": ""
+    },
+    {
+      "src": "http://politecnicacuenca.com/wp-content/uploads/2018/01/motion-sensor-night-light-plug-in-unique-ideas-marvelous-bathroom-night-lights-for-bathrooms-simple-night-of-motion-sensor-night-light-plug-in.jpg",
+      "title": ""
+    }
+  ]
+}

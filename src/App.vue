@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="position: fixed;top: 0;bottom: 0;left: 0;right: 0;">
     <router-view></router-view>
   </div>
 </template>
@@ -15,7 +15,7 @@
     /**
      * The name of the application.
      */
-    name: 'vue-boilerplate',
+    name: 'HVM-Interface',
 
     /**
      * Fires when the app has been mounted.
@@ -26,6 +26,7 @@
       if (this.$store.state.auth.authenticated) {
         this.$store.dispatch('account/find');
       }
+      this.$options.sockets.onmessage = data => console.log(data);
     },
   };
 </script>
