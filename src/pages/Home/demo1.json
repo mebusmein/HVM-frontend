@@ -19,7 +19,7 @@
     },
     {
       "type": "wait",
-      "delay": 3000
+      "delay": 8000
     },
     {
       "type": "slide",
@@ -39,7 +39,7 @@
     },
     {
       "type": "wait",
-      "delay": 1000
+      "delay": 4000
     },
     {
       "type": "knx",
@@ -49,11 +49,21 @@
     },
     {
       "type": "wait",
-      "delay": 3000
+      "delay": 2000
+    },
+    {
+      "type": "knx",
+      "data": {
+        "bedroom_wall": 0
+      }
+    },
+    {
+      "type": "wait",
+      "delay": 2000
     },
     {
       "type": "slide",
-      "slide": 2
+      "slide": 3
     },
     {
       "type": "knx",
@@ -65,6 +75,22 @@
         "bathroom_light": 1,
         "staircase_light": 0,
         "livingroom_light": 0
+      }
+    },
+    {
+      "type": "wait",
+      "delay": 10000
+    },
+    {
+      "type": "knx",
+      "data": {
+        "bedroom_wall": 0,
+        "livingroom_wall": 0,
+        "bedroom_cover": 1,
+        "livingroom_cover": 1,
+        "bathroom_light": 0,
+        "staircase_light": 0,
+        "livingroom_light": 1
       }
     }
   ],
