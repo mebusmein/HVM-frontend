@@ -76,14 +76,7 @@
         <b-btn style="width:100%" v-for="demo in demos" @click="startDemo(demo)" variant="outline-success">{{ demo.title }}</b-btn>
       </b-button-group>
     </b-modal>
-    <div class="debugger">
-      <ul style="list-style-type: none;">
-        <li>{{ demo_running }} :Demo running</li>
-        <li>{{ demo_count }} :Demo count</li>
-        <li>{{ slide_speed }} :Slide speed</li>
-        <li>{{ slide_number }} :Slide number</li>
-      </ul>
-    </div>
+    
   </v-layout>
 </template>
 

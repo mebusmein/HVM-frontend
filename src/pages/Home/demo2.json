@@ -1,5 +1,5 @@
 {
-  "title": "Demo 2",
+  "title": "Gemak en veiligheid",
   "demo": [
     {
       "type": "slide",
@@ -9,17 +9,17 @@
       "type": "knx",
       "data": {
         "bedroom_wall": 0,
-        "livingroom_wall": 0,
-        "bedroom_cover": 0,
-        "livingroom_cover": 0,
-        "bathroom_light": 0,
+        "livingroom_wall": 100,
+        "bedroom_cover": 1,
+        "livingroom_cover": 1,
+        "bathroom_light": 1,
         "staircase_light": 0,
-        "livingroom_light": 0
+        "livingroom_light": 1
       }
     },
     {
       "type": "wait",
-      "delay": 3000
+      "delay": 6000
     },
     {
       "type": "slide",
@@ -28,23 +28,29 @@
     {
       "type": "knx",
       "data": {
-        "bedroom_wall": 50,
-        "livingroom_wall": 0,
-        "bedroom_cover": 0,
-        "livingroom_cover": 0,
-        "bathroom_light": 0,
-        "staircase_light": 0,
-        "livingroom_light": 0
+        "livingroom_light": 0,
+        "staircase_light": 1
       }
     },
     {
       "type": "wait",
-      "delay": 1000
+      "delay": 3000
     },
     {
       "type": "knx",
       "data": {
-        "staircase_light": 1
+        "bedroom_wall": 50
+      }
+    },
+    {
+      "type": "wait",
+      "delay": 6000
+    },
+    {
+      "type": "knx",
+      "data": {
+        "bedroom_wall": 0,
+        "bedroom_cover": 0
       }
     },
     {
@@ -56,34 +62,58 @@
       "slide": 2
     },
     {
+      "type": "wait",
+      "delay": 12000
+    },
+    {
+      "type": "slide",
+      "slide": 3
+    },
+    {
       "type": "knx",
       "data": {
         "bedroom_wall": 0,
         "livingroom_wall": 0,
         "bedroom_cover": 0,
         "livingroom_cover": 0,
-        "bathroom_light": 1,
+        "bathroom_light": 0,
         "staircase_light": 0,
         "livingroom_light": 0
+      }
+    },
+    {
+      "type": "wait",
+      "delay": 15000
+    },
+    {
+      "type": "knx",
+      "data": {
+        "bedroom_wall": 0,
+        "livingroom_wall": 0,
+        "bedroom_cover": 1,
+        "livingroom_cover": 1,
+        "bathroom_light": 0,
+        "staircase_light": 0,
+        "livingroom_light": 1
       }
     }
   ],
   "slides": [
     {
-      "src": "http://3.bp.blogspot.com/__Y_fpB7LgtA/TNwYa-V5ocI/AAAAAAAABx0/RI9B8fMxqhs/s1600/1200_nacht_PS_8463%2Bkopie.jpg",
-      "title": "02:44"
+      "src": "/static/0304ac71af7b4dac69ce8dbb4388939f.jpg",
+      "title": "Er word eten voorbereid"
     },
     {
-      "src": "https://want.nl/wp-content/uploads/2015/11/Slapen-bed-WANT.jpg",
-      "title": "Opstaan voor het toilet"
+      "src": "/static/Slapen-bed-WANT.jpg",
+      "title": "Na het eten besluit de bewoner op bed te gaan"
     },
     {
-      "src": "https://i.pinimg.com/originals/e1/ee/25/e1ee25af71c245f5fb446ac4b3b960d0.jpg",
-      "title": ""
+      "src": "/static/pots-on-stove.jpg",
+      "title": "Een apperaat is aan gebleven"
     },
     {
-      "src": "http://politecnicacuenca.com/wp-content/uploads/2018/01/motion-sensor-night-light-plug-in-unique-ideas-marvelous-bathroom-night-lights-for-bathrooms-simple-night-of-motion-sensor-night-light-plug-in.jpg",
-      "title": ""
+      "src": "/static/1200_nacht_PS_8463.jpg",
+      "title": "Het huis verzorgdt veiligheid"
     }
   ]
 }

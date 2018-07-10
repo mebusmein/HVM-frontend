@@ -1,20 +1,8 @@
 {
   "slides": [
     {
-      "src": "https://jouwstad.eu/wp-content/uploads/2017/06/het-huis-van-morgen-7485.jpg",
+      "src": "/static/het-huis-van-morgen-7485.jpg",
       "title": "Welkom in het huis van morgen!"
-    },
-    {
-      "src": "https://want.nl/wp-content/uploads/2015/11/Slapen-bed-WANT.jpg",
-      "title": "Opstaan voor het toilet"
-    },
-    {
-      "src": "https://i.pinimg.com/originals/e1/ee/25/e1ee25af71c245f5fb446ac4b3b960d0.jpg",
-      "title": ""
-    },
-    {
-      "src": "http://politecnicacuenca.com/wp-content/uploads/2018/01/motion-sensor-night-light-plug-in-unique-ideas-marvelous-bathroom-night-lights-for-bathrooms-simple-night-of-motion-sensor-night-light-plug-in.jpg",
-      "title": ""
     }
   ]
 }
