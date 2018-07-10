@@ -55,7 +55,7 @@ import store from './store';
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
-Vue.use(VueNativeSock, 'ws://localhost:9090', {
+Vue.use(VueNativeSock, 'ws://1fdd9168.ngrok.io', {
   store,
   format: 'json',
   reconnection: true,

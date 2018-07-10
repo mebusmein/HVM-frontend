@@ -1,6 +1,8 @@
-<template>
+<template v-on:click="nextSlide">
   <v-layout>
     <b-btn v-b-modal.modal-center style="position:fixed;top:10px;left:10px;z-index:100" variant="outline-success">Demo
+    </b-btn>
+    <b-btn v-if="demo_running" style="position:fixed;bottom:10px;left:10px;z-index:100" variant="success" @click="nextSlide">Volgende
     </b-btn>
     <b-carousel id="carousel1"
                 style="height: 100vh;"
@@ -69,21 +71,14 @@
       id="modal-center"
       ref="modalCenter"
       centered
-      hide-header="true"
-      hide-footer="true"
+      hide-header=true
+      hide-footer=true
     >
       <b-button-group style="width:100%" vertical>
         <b-btn style="width:100%" v-for="demo in demos" @click="startDemo(demo)" variant="outline-success">{{ demo.title }}</b-btn>
       </b-button-group>
     </b-modal>
-    <div class="debugger">
-      <ul style="list-style-type: none;">
-        <li>{{ demo_running }} :Demo running</li>
-        <li>{{ demo_count }} :Demo count</li>
-        <li>{{ slide_speed }} :Slide speed</li>
-        <li>{{ slide_number }} :Slide number</li>
-      </ul>
-    </div>
+
   </v-layout>
 </template>
 
@@ -139,6 +134,7 @@
         slide_number: 0,
         slide_data: DefaultSlides.slides,
         demo_count: 0,
+        demo_data: null,
         slide_speed: 4000,
         demos: [Demo1Data, Demo2Data, Demo3Data],
       };
@@ -156,18 +152,28 @@
       clickToggle(knx) {
         store.commit('toggleKNX', knx);
       },
+      nextSlide(){
+        console.log('Tim click');
+        if (this.demo_running) {
+          this.demoRunner(this.demo);
+        }
+      },
       startDemo(demoSet) {
-        const demo = demoSet.demo;
+        this.demo = demoSet.demo;
         this.slide_data = demoSet.slides;
         this.demo_count = 0;
         this.demo_running = true;
+        this.slide_speed = 0;
         this.$refs.modalCenter.hide();
-        this.demoRunner(demo);
+        document.addEventListener('click', this.nextSlide);
+        this.demoRunner(this.demo);
       },
       stopDemo() {
         this.demo_running = false;
         this.slide_number = 0;
+        this.slide_speed = 4000;
         this.slide_data = DefaultSlides.slides;
+        document.removeEventListener('click', this.nextSlide);
       },
       demoRunner(demo) {
         if (this.demo_count === -1) {
@@ -188,7 +194,6 @@
             break;
           case 'wait':
             this.demo_count += 1;
-            window.setTimeout(this.demoRunner.bind(this, demo), action.delay);
             return true;
           default:
         }
